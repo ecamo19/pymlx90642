@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "pymlx90642"
+  site-url: "https://ecamo19.github.io/pymlx90642"
+  description: ""
+  repo-branch: main
+  repo-url: "https://github.com/ecamo19/pymlx90642"

@@ -1,0 +1,10 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# Others
+.DS_store
+.ipynb_checkpoints
+.ruff_cache
+.vscode
+**/__pycache__/
