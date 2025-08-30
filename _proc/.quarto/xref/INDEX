@@ -1,5 +1,12 @@
 {
   "index.ipynb": {
-    "README.md": "16cd649b"
+    "README.md": "16cd649b",
+    "index.html": "09533102"
+  },
+  "00_core.ipynb": {
+    "core.html": "9b4cef30"
+  },
+  "00_utils.ipynb": {
+    "utils.html": "6b0e454f"
   }
 }

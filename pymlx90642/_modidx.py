@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://ecamo19.github.io',
                 'git_url': 'https://github.com/ecamo19/pymlx90642',
                 'lib_path': 'pymlx90642'},
-  'syms': {'pymlx90642.core': {'pymlx90642.core.foo': ('core.html#foo', 'pymlx90642/core.py')}}}
+  'syms': {'pymlx90642.core': {'pymlx90642.core.foo': ('utils.html#foo', 'pymlx90642/core.py')}}}
