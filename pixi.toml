@@ -3,7 +3,7 @@ authors = ["Craig Barton","ecamo19 <erickcamo19@gmail.com>"]
 channels = ["conda-forge"]
 description = 'Python code for communicate with the Melexis mlx90642 thermal sensor'
 name = "pymlx90642"
-platforms = ["linux-64", "win-64", "osx-arm64", "osx-64"]
+platforms = ["linux-64", "osx-arm64", "osx-64"]
 version = "0.1.0"
 
 [dependencies]
@@ -19,6 +19,7 @@ numpy = ">=2.3.2,<3"
 pydantic = ">=2.11.7,<3"
 matplotlib = ">=3.10.5,<4"
 pillow = ">=11.3.0,<12"
+bash = ">=5.2.37,<6"
 
 [tasks]
 
