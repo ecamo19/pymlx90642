@@ -1,0 +1,2 @@
+[nbdev]
+pymlx90642 = pymlx90642._modidx:d
