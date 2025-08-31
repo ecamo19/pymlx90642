@@ -8,5 +8,11 @@
   },
   "00_utils.ipynb": {
     "utils.html": "6b0e454f"
+  },
+  "01_thermal_camera.ipynb": {
+    "thermal_camera.html": "3438ee7c"
+  },
+  "00_mlx90642.ipynb": {
+    "mlx90642.html": "18a0cfd0"
   }
 }

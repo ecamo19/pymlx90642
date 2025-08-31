@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ecamo19.github.io/pymlx90642/utils.html</loc>
-    <lastmod>2025-08-30T08:14:55.901Z</lastmod>
+    <lastmod>2025-08-31T08:07:18.636Z</lastmod>
   </url>
   <url>
     <loc>https://ecamo19.github.io/pymlx90642/index.html</loc>
-    <lastmod>2025-08-30T07:54:32.159Z</lastmod>
+    <lastmod>2025-08-31T08:00:02.100Z</lastmod>
   </url>
   <url>
     <loc>https://ecamo19.github.io/pymlx90642/core.html</loc>
     <lastmod>2025-08-30T07:52:52.888Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ecamo19.github.io/pymlx90642/thermal_camera.html</loc>
+    <lastmod>2025-08-31T08:07:18.595Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ecamo19.github.io/pymlx90642/mlx90642.html</loc>
+    <lastmod>2025-08-31T08:08:11.950Z</lastmod>
   </url>
 </urlset>

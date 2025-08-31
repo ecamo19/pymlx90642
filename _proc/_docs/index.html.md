@@ -66,11 +66,36 @@ Documentation can be found hosted on this GitHub [repository][repo]'s [pages][do
 
 ## How to use
 
-Fill me in please! Don't forget code examples:
+## Configure raspberry pi:
 
 ::: {#cell-14 .cell}
 ``` {.python .cell-code}
-1+1
+# Update system
+sudo apt update && sudo apt upgrade -y
+
+# Install Python packages
+sudo apt install i2c-tools -y
+```
+:::
+
+
+::: {#cell-15 .cell}
+``` {.python .cell-code}
+# Enable I2C interface
+sudo raspi-config
+
+# Navigate to: Interface Options > I2C > Yes
+
+# Reboot
+sudo reboot
+
+# Verify I2C is working
+sudo i2cdetect -y 1
+
+
+# You should see device at address 0x33 (default MLX90642 address)
+
+#| hide
 ```
 
 ::: {.cell-output .cell-output-display}
@@ -79,6 +104,5 @@ Fill me in please! Don't forget code examples:
 ```
 :::
 :::
-
 
 

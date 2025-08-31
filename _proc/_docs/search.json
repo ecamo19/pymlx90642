@@ -2,12 +2,9 @@
   {
     "objectID": "utils.html",
     "href": "utils.html",
-    "title": "core",
+    "title": "mlx90642",
     "section": "",
-    "text": "foo\n\n foo ()",
-    "crumbs": [
-      "core"
-    ]
+    "text": "source\n\nMLX90642\n\n MLX90642 (i2c_bus:int=1, i2c_addr:int=102)\n\nInitialize MLX90642 sensor."
   },
   {
     "objectID": "index.html",
@@ -44,7 +41,7 @@
     "href": "index.html#how-to-use",
     "title": "pymlx90642",
     "section": "How to use",
-    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "text": "How to use",
     "crumbs": [
       "pymlx90642"
     ]
@@ -55,5 +52,35 @@
     "title": "core",
     "section": "",
     "text": "foo\n\n foo ()"
+  },
+  {
+    "objectID": "thermal_camera.html",
+    "href": "thermal_camera.html",
+    "title": "Usage",
+    "section": "",
+    "text": "#mport time\n#mport numpy as np\n#mport matplotlib.pyplot as plt\n#rom matplotlib.animation import FuncAnimation\n#rom mlx90642 import MLX90642\n#\n#class ThermalCamera:\n#    def __init__(self):\n#        self.sensor = MLX90642()\n#        self.fig, self.ax = plt.subplots(figsize=(10, 8))\n#        self.im = None\n#        \n#    def setup(self):\n#        \"\"\"Initialize the thermal camera\"\"\"\n#        print(\"Setting up thermal camera...\")\n#        try:\n#            self.sensor.init_sensor()\n#            print(\"Thermal camera ready!\")\n#            return True\n#        except Exception as e:\n#            print(f\"Failed to initialize sensor: {e}\")\n#            return False\n#    \n#    def update_plot(self, frame):\n#        \"\"\"Update the thermal image plot\"\"\"\n#        thermal_data = self.sensor.get_thermal_image()\n#        if thermal_data is not None:\n#            if self.im is None:\n#                # First frame - create the image plot\n#                self.im = self.ax.imshow(thermal_data, cmap='hot', interpolation='bilinear')\n#                self.ax.set_title('MLX90642 Thermal Camera')\n#                self.ax.set_xlabel('X Position')\n#                self.ax.set_ylabel('Y Position')\n#                \n#                # Add colorbar\n#                cbar = plt.colorbar(self.im, ax=self.ax)\n#                cbar.set_label('Temperature (°C)')\n#            else:\n#                # Update existing image\n#                self.im.set_array(thermal_data)\n#                self.im.set_clim(vmin=thermal_data.min(), vmax=thermal_data.max())\n#        \n#        return [self.im] if self.im else []\n#    \n#    def start_live_view(self):\n#        \"\"\"Start live thermal imaging\"\"\"\n#        if not self.setup():\n#            return\n#        \n#        print(\"Starting live thermal view... Press Ctrl+C to stop\")\n#        \n#        # Create animation\n#        anim = FuncAnimation(self.fig, self.update_plot, interval=250, blit=False)\n#        plt.show()\n#    \n#    def capture_single_image(self):\n#        \"\"\"Capture and save a single thermal image\"\"\"\n#        if not self.setup():\n#            return\n#        \n#        print(\"Capturing thermal image...\")\n#        thermal_data = self.sensor.get_thermal_image()\n#        \n#        if thermal_data is not None:\n#            # Create and save the plot\n#            plt.figure(figsize=(10, 8))\n#            plt.imshow(thermal_data, cmap='hot', interpolation='bilinear')\n#            plt.title(f'Thermal Image - Range: {thermal_data.min():.1f}°C to {thermal_data.max():.1f}°C')\n#            plt.xlabel('X Position')\n#            plt.ylabel('Y Position')\n#            plt.colorbar(label='Temperature (°C)')\n#            \n#            filename = f'thermal_image_{int(time.time())}.png'\n#            plt.savefig(filename, dpi=150, bbox_inches='tight')\n#            print(f\"Image saved as {filename}\")\n#            plt.show()\n#        else:\n#            print(\"Failed to capture thermal image\")\n#\n#def main():\n#    print(\"MLX90642 Thermal Camera\")\n#    print(\"1. Live view\")\n#    print(\"2. Capture single image\")\n#    \n#    choice = input(\"Select option (1 or 2): \")\n#    \n#    camera = ThermalCamera()\n#    \n#    if choice == '1':\n#        try:\n#            camera.start_live_view()\n#        except KeyboardInterrupt:\n#            print(\"\\nLive view stopped\")\n#    elif choice == '2':\n#        camera.capture_single_image()\n#    else:\n#        print(\"Invalid choice\")\n#\n#if __name__ == \"__main__\":\n#    main()\n\n\n---------------------------------------------------------------------------\nModuleNotFoundError                       Traceback (most recent call last)\nCell In[2], line 5\n      3 import matplotlib.pyplot as plt\n      4 from matplotlib.animation import FuncAnimation\n----&gt; 5 from mlx90642 import MLX90642\n      6 #\n      7 #class ThermalCamera:\n      8 #    def __init__(self):\n   (...)     99 #if __name__ == \"__main__\":\n    100 #    main()\n\nModuleNotFoundError: No module named 'mlx90642'\n\n\n\n\n# Run the thermal camera application\n#ython3 thermal_camera.py",
+    "crumbs": [
+      "Usage"
+    ]
+  },
+  {
+    "objectID": "index.html#configure-raspberry-pi",
+    "href": "index.html#configure-raspberry-pi",
+    "title": "pymlx90642",
+    "section": "Configure raspberry pi:",
+    "text": "Configure raspberry pi:\n\n# Update system\nsudo apt update && sudo apt upgrade -y\n\n# Install Python packages\nsudo apt install i2c-tools -y\n\n\n# Enable I2C interface\nsudo raspi-config\n\n# Navigate to: Interface Options &gt; I2C &gt; Yes\n\n# Reboot\nsudo reboot\n\n# Verify I2C is working\nsudo i2cdetect -y 1\n\n\n# You should see device at address 0x33 (default MLX90642 address)\n\n#| hide\n\n2",
+    "crumbs": [
+      "pymlx90642"
+    ]
+  },
+  {
+    "objectID": "mlx90642.html",
+    "href": "mlx90642.html",
+    "title": "mlx90642",
+    "section": "",
+    "text": "source\n\nMLX90642\n\n MLX90642 (i2c_bus:int=1, i2c_addr:int=102)\n\nInitialize MLX90642 sensor.",
+    "crumbs": [
+      "mlx90642"
+    ]
   }
 ]
